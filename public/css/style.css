@@ -1,0 +1,263 @@
+/*******************************************/
+/* Animated Twitter Slideshow Styles
+/*******************************************/
+
+#ats-slider .ats-slider-wrapper {
+  opacity: 0;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#ats-slider .ats-slider-wrapper.active {
+  opacity: 1.0;
+}
+#ats-slider .ats-item-wrapper {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#ats-slider .ats-item-wrapper .ats-bg-image {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff url("../img/default_bg.jpg") 0 0 no-repeat;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1, 1);
+  -webkit-transition: all linear 18s;
+  -o-transition: all linear 18s;
+  transition: all linear 18s;
+}
+#ats-slider .ats-item-wrapper .ats-bg-mask {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+#ats-slider .ats-item-wrapper .ats-item {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper {
+  font-family: Helvetica,Roboto,"Segoe UI",Calibri,sans-serif !important;
+  font-size: 32px;
+  line-height: 36px;
+  display: inline-block;
+  width: 33%;
+  padding: 20px;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%) rotate(-3deg);
+  -webkit-transition: transform linear 12s;
+  -o-transition: transform linear 12s;
+  transition: transform linear 12s;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-main {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  margin-top: .5em;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-main p {
+  font-size: .75em;
+  line-height: 1.4em;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-main p span.tweet-date, #ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-main p span.tweet-date a {
+  display: inline-block;
+  width: 100%;
+  font-size: .9em;
+  color: #657786;
+  padding-top: .5em;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  background: url("../img/twitter_logo_icon.svg") 100% 0% no-repeat;
+  background-size: .75em .75em;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:link, #ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:visited {
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:link .tweet-user-avatar, #ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:visited .tweet-user-avatar {
+  display: block;
+  float: left;
+  width: 2em;
+  height: 2em;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: .5em;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:link .tweet-user-avatar img, #ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:visited .tweet-user-avatar img {
+  display: block;
+  float: left;
+  width: 2em;
+  height: 2em;
+  background: #fff;
+  border-radius: 50%;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:link .tweet-user-name, #ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:visited .tweet-user-name {
+  display: inline-block;
+  float: left;
+  font-size: 1em;
+  line-height: 1.125em;
+  font-weight: bold;
+  text-align: left;
+  color: #000;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:link .tweet-user-name.verified, #ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:visited .tweet-user-name.verified {
+  background: url("../img/twitter_verified_icon.svg") 100% 0% no-repeat;
+  background-size: .75em .75em;
+  padding-right: 1.2em;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:link .tweet-user-name .tweet-user-screen-name, #ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:visited .tweet-user-name .tweet-user-screen-name {
+  float: left;
+  font-size: .75em;
+  line-height: .875em;
+  font-weight: normal;
+  color: #657786;
+}
+#ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:active .tweet-user-name, #ats-slider .ats-item-wrapper .ats-item .tweet-wrapper .tweet-inner-top a:hover .tweet-user-name {
+  color: #3b94d9;
+}
+#ats-slider .ats-item-wrapper.active .ats-bg-image {
+  transform: scale(1.3, 1.3);
+}
+#ats-slider .ats-item-wrapper.active .ats-item .tweet-wrapper {
+  transform: translate(-50%, -50%) rotate(-1deg);
+}
+#ats-slider.ats-lrg .ats-item-wrapper .ats-item .tweet-wrapper {
+  font-size: 32px;
+  line-height: 36px;
+  width: 50%;
+}
+#ats-slider.ats-med .ats-item-wrapper .ats-item .tweet-wrapper {
+  font-size: 24px;
+  line-height: 28px;
+  width: 50%;
+}
+#ats-slider.ats-sml .ats-item-wrapper .ats-item .tweet-wrapper {
+  font-size: 20px;
+  line-height: 24px;
+  width: 75%;
+}
+#ats-slider.ats-xsm .ats-item-wrapper .ats-item .tweet-wrapper {
+  font-size: 18px;
+  line-height: 22px;
+  width: 85%;
+}
+
+#ats-slider {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  width: 100%;
+  height: 440px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#ats-slider .ats-slider-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  margin-left: 0;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#ats-slider .ats-slider-wrapper .ats-item-wrapper {
+  white-space: normal;
+}
+#ats-slider .tweet-counter-wrapper {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style-type: none;
+}
+#ats-slider .tweet-counter-wrapper .tweet-counter {
+  list-style-type: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.4s ease background;
+  -o-transition: 0.4s ease background;
+  transition: 0.4s ease background;
+}
+#ats-slider .tweet-counter-wrapper .tweet-counter:hover, #ats-slider .tweet-counter-wrapper .tweet-counter.lit {
+  background: rgba(255, 255, 255, 0.7);
+}
+#ats-slider .tweet-nav-bttn {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: 0.4s ease border-color;
+  -o-transition: 0.4s ease border-color;
+  transition: 0.4s ease border-color;
+}
+#ats-slider .tweet-nav-bttn#prev {
+  right: auto;
+  left: 20px;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
+}
+#ats-slider .tweet-nav-bttn#prev:hover {
+  border-color: transparent rgba(255, 255, 255, 0.7) transparent transparent;
+}
+#ats-slider .tweet-nav-bttn:hover {
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.7);
+}
+#ats-slider.ats-sml .tweet-nav-bttn, #ats-slider.ats-xsm .tweet-nav-bttn {
+  display: none;
+}
+#ats-slider.ats-sml .tweet-counter-wrapper .tweet-counter, #ats-slider.ats-xsm .tweet-counter-wrapper .tweet-counter {
+  width: 8px;
+  height: 8px;
+}
